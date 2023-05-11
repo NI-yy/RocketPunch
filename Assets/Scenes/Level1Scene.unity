@@ -20566,6 +20566,7 @@ MonoBehaviour:
   LoadTitleSceneCube: {fileID: 858337595}
   LoadRankingSceneCube: {fileID: 0}
   MessageCanvas: {fileID: 1880651121}
+  FireWorks: {fileID: 0}
 --- !u!4 &909060566
 Transform:
   m_ObjectHideFlags: 0
@@ -29166,7 +29167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79a57c9bab9fa04981b5b432972c3ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6397299145475853824, guid: cb3587d9e8080704aae546393cdb9a0f, type: 3}
+  blueBullet: {fileID: 6397299145475853824, guid: cb3587d9e8080704aae546393cdb9a0f, type: 3}
+  yellowBullet: {fileID: 6397299145475853824, guid: cd66b3a61d1b27e4b938acce24662121, type: 3}
+  redBullet: {fileID: 6397299145475853824, guid: 1d0272c4c6c1d5f418b0d3d6af7a04f8, type: 3}
   rayScale: 2
   TrackingSpace: {fileID: 414726075}
 --- !u!1001 &1237192441

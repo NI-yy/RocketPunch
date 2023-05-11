@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class HandController : MonoBehaviour
 {
     OVRInput.Controller LeftCon;
     OVRInput.Controller RightCon;
-    public GameObject bullet;
+    public GameObject blueBullet;
+    public GameObject yellowBullet;
+    public GameObject redBullet;
     public float rayScale;
 
     float delayTime = 0.1f;
@@ -22,7 +25,10 @@ public class HandController : MonoBehaviour
     Vector3 posTrackingSpace;
 
     List<Vector3> vLeftList = new List<Vector3>();
+    List<float> vLeftMagnitudeList = new List<float>();
     List<Vector3> vRightList = new List<Vector3>();
+    List<float> vRightMagnitudeList = new List<float>();
+
 
     public GameObject TrackingSpace;
 
@@ -52,12 +58,14 @@ public class HandController : MonoBehaviour
         GetRightPunch(posRight, posTrackingSpace, vRight);
     }
 
+
     void GetLeftPunch(Vector3 posLeft, Vector3 posTrackingSpace, Vector3 vLeft)
     {
 
         if(vLeft.magnitude > 2.0f) //速度が2.0を超えたら計測
         {
             vLeftList.Add(vLeft);
+            vLeftMagnitudeList.Add(vLeft.magnitude);
             int listCounttest = vLeftList.Count;
         }
         else //速度が2.0以下
@@ -68,15 +76,33 @@ public class HandController : MonoBehaviour
             {
                 return;
             }
-            if (vLeftList[listCount - 1].magnitude > 2.0f) //速度が2.0を"下回った"とき
+            if (vLeftMagnitudeList[listCount - 1] > 2.0f) //速度が2.0を"下回った"とき
             {
                 Vector3 worldPosLeft = posLeft + posTrackingSpace;
-                GameObject bulletObject = Instantiate(bullet, worldPosLeft, Quaternion.identity);
+                GameObject bulletObject;
+                Debug.Log("パンチ速度最大値は" + vLeftMagnitudeList.Max());
+
+                if(vLeftMagnitudeList.Max() < 3)
+                {
+                    Debug.Log("青色");
+                    bulletObject = Instantiate(blueBullet, worldPosLeft, Quaternion.identity);
+                }
+                else if(vLeftMagnitudeList.Max() >= 3 && vLeftMagnitudeList.Max() < 4)
+                {
+                    Debug.Log("黄色");
+                    bulletObject = Instantiate(yellowBullet, worldPosLeft, Quaternion.identity);
+                }
+                else
+                {
+                    Debug.Log("赤色");
+                    bulletObject = Instantiate(redBullet, worldPosLeft, Quaternion.identity);
+                }
+                
                 Rigidbody rb = bulletObject.GetComponent<Rigidbody>();  // rigidbodyを取得
 
                 rb.velocity = Ishit(worldPosLeft, GetAverage(vLeftList)) * adjustVelocity;
                 vLeftList.Clear();
-                
+                vLeftMagnitudeList.Clear();
             }
         }
 
@@ -85,28 +111,46 @@ public class HandController : MonoBehaviour
 
     void GetRightPunch(Vector3 posRight, Vector3 posTrackingSpace, Vector3 vRight)
     {
-
         if (vRight.magnitude > 2.0f) //速度が2.0を超えたら計測
         {
             vRightList.Add(vRight);
+            vRightMagnitudeList.Add(vRight.magnitude);
+            int listCounttest = vRightList.Count;
         }
         else //速度が2.0以下
         {
-
             int listCount = vRightList.Count;
-
-            if (listCount < 1)
+            if (listCount <= 1)
             {
                 return;
             }
-            if (vRightList[listCount - 1].magnitude > 2.0f) //速度が2.0を"下回った"とき
+            if (vRightMagnitudeList[listCount - 1] > 2.0f) //速度が2.0を"下回った"とき
             {
                 Vector3 worldPosRight = posRight + posTrackingSpace;
-                GameObject bulletObject = Instantiate(bullet, worldPosRight, Quaternion.identity);
-                Rigidbody rb = bulletObject.GetComponent<Rigidbody>();  // rigidbodyを取得
-                rb.velocity = Ishit(worldPosRight, GetAverage(vRightList)) * adjustVelocity;
+                GameObject bulletObject;
+                Debug.Log("パンチ速度最大値は" + vRightMagnitudeList.Max());
 
+                if (vRightMagnitudeList.Max() < 3)
+                {
+                    Debug.Log("青色");
+                    bulletObject = Instantiate(blueBullet, worldPosRight, Quaternion.identity);
+                }
+                else if (vRightMagnitudeList.Max() >= 3 && vRightMagnitudeList.Max() < 4)
+                {
+                    Debug.Log("黄色");
+                    bulletObject = Instantiate(yellowBullet, worldPosRight, Quaternion.identity);
+                }
+                else
+                {
+                    Debug.Log("赤色");
+                    bulletObject = Instantiate(redBullet, worldPosRight, Quaternion.identity);
+                }
+
+                Rigidbody rb = bulletObject.GetComponent<Rigidbody>();  // rigidbodyを取得
+
+                rb.velocity = Ishit(worldPosRight, GetAverage(vRightList)) * adjustVelocity;
                 vRightList.Clear();
+                vRightMagnitudeList.Clear();
             }
         }
     }

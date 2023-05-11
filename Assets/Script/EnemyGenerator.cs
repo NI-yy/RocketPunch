@@ -52,11 +52,12 @@ public class EnemyGenerator : MonoBehaviour
 
     public void GenerateFuncSet()
     {
-        generateFuncs = new System.Action[4];
+        generateFuncs = new System.Action[5];
         generateFuncs[0] = TitleGenerate;
         generateFuncs[1] = Level1Generate;
         generateFuncs[2] = Level2Generate;
         generateFuncs[3] = Level3Generate;
+        generateFuncs[4] = Level4Generate;
     }
 
     void TitleGenerate()
@@ -132,5 +133,29 @@ public class EnemyGenerator : MonoBehaviour
             enemyObject.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
         }
 
+    }
+
+    void Level4Generate()
+    {
+        range_lower = RangeManager.GetComponent<RangeManager>().range_lower;
+        range_upper = RangeManager.GetComponent<RangeManager>().range_upper;
+        Debug.Log(range_lower);
+        Debug.Log(range_upper);
+        EnemyCount = 5;
+
+        int i;
+        for (i = 0; i < EnemyCount; i++)
+        {
+            // rangeAとrangeBのx座標の範囲内でランダムな数値を作成
+            float x = Random.Range(range_lower.x, range_upper.x);
+            // rangeAとrangeBのy座標の範囲内でランダムな数値を作成
+            float y = Random.Range(range_lower.y, range_upper.y);
+            // rangeAとrangeBのz座標の範囲内でランダムな数値を作成
+            float z = Random.Range(range_lower.z, range_upper.z);
+
+            // GameObjectを上記で決まったランダムな場所に生成
+            GameObject enemyObject = Instantiate(createPrefab, new Vector3(x, y, z), createPrefab.transform.rotation);
+            enemyObject.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
+        }
     }
 }
