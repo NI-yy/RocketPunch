@@ -131,6 +131,9 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 93eaace86b49b6f4c9f2f148135b8375, type: 3}
   generator: {fileID: 0}
   hitEffect: {fileID: 8699108103038855094}
+  isBlue: 1
+  isYellow: 0
+  isRed: 0
 --- !u!1 &8699108102830263225
 GameObject:
   m_ObjectHideFlags: 0

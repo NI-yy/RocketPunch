@@ -3230,7 +3230,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f12dcbc3df15df44968ffdf1d9ceeaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createPrefab: {fileID: 8699108102830263225, guid: e25b4f65492962f42a90a9990b3a92f6, type: 3}
+  BlueEnemy: {fileID: 8699108102830263225, guid: e25b4f65492962f42a90a9990b3a92f6, type: 3}
+  YellowEnemy: {fileID: 8699108102830263225, guid: b73ff6ab8761cf4429d3861fd4d5113b, type: 3}
+  RedEnemy: {fileID: 8699108102830263225, guid: 239236e32d00ee44ab6573d8e8a8d88c, type: 3}
   GameDirector: {fileID: 2141559291}
   RangeManager: {fileID: 2086760480}
   EnemyCount: 10

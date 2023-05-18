@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5280917057944728170}
   - component: {fileID: 5280917057944728164}
   - component: {fileID: 5280917057944728165}
+  - component: {fileID: 2378852995052149218}
   m_Layer: 0
   m_Name: hitEffect
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5280917057944728171}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4870,6 +4871,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2378852995052149218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280917057944728171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cec17f5f3c3bde45bc98c4451f6c576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eightSidedBody_Enemy: {fileID: 5976295706926347505}
 --- !u!1 &5280917058172313188
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,6 +5049,9 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 93eaace86b49b6f4c9f2f148135b8375, type: 3}
   generator: {fileID: 0}
   hitEffect: {fileID: 5280917057944728171}
+  isBlue: 1
+  isYellow: 0
+  isRed: 0
 --- !u!114 &3598629742284660753
 MonoBehaviour:
   m_ObjectHideFlags: 0

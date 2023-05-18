@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level4Scene.unity
     guid: 305c9e11c5941654f840e5a083cc4ecd
   - enabled: 1
+    path: Assets/Scenes/Level5Scene.unity
+    guid: 978e6593bd240eb48bcc2e4364a85044
+  - enabled: 1
     path: Assets/naichilab/unity-simple-ranking/Scenes/Ranking.unity
     guid: 152244f5855414ac4a3874f14efa583c
   - enabled: 1

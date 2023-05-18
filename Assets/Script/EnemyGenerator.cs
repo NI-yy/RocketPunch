@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
 {
-    [SerializeField]
-    [Tooltip("生成するGameObject")]
-    private GameObject createPrefab;
+    public GameObject BlueEnemy;
+    public GameObject MovingBlueEnemy;
+    public GameObject YellowEnemy;
+    public GameObject RedEnemy;
 
     public GameObject GameDirector;
     public GameObject RangeManager;
@@ -52,12 +53,13 @@ public class EnemyGenerator : MonoBehaviour
 
     public void GenerateFuncSet()
     {
-        generateFuncs = new System.Action[5];
+        generateFuncs = new System.Action[6];
         generateFuncs[0] = TitleGenerate;
         generateFuncs[1] = Level1Generate;
         generateFuncs[2] = Level2Generate;
         generateFuncs[3] = Level3Generate;
         generateFuncs[4] = Level4Generate;
+        generateFuncs[5] = Level5Generate;
     }
 
     void TitleGenerate()
@@ -79,7 +81,7 @@ public class EnemyGenerator : MonoBehaviour
             float z = Random.Range(range_lower.z, range_upper.z);
 
             // GameObjectを上記で決まったランダムな場所に生成
-            GameObject enemyObject = Instantiate(createPrefab, new Vector3(x, y, z), createPrefab.transform.rotation);
+            GameObject enemyObject = Instantiate(BlueEnemy, new Vector3(x, y, z), BlueEnemy.transform.rotation);
             enemyObject.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
         }
     }
@@ -88,7 +90,7 @@ public class EnemyGenerator : MonoBehaviour
     {
         EnemyCount = 1;
         // GameObjectを1個だけ生成
-        GameObject enemyObject = Instantiate(createPrefab, new Vector3(0, 2.0f, 7.0f), createPrefab.transform.rotation);
+        GameObject enemyObject = Instantiate(BlueEnemy, new Vector3(0, 2.0f, 7.0f), BlueEnemy.transform.rotation);
         enemyObject.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
     }
 
@@ -117,7 +119,7 @@ public class EnemyGenerator : MonoBehaviour
 
             float defaltPos = -(EnemyCount / 2) * 2.0f + 1;
 
-            GameObject enemyObject = Instantiate(createPrefab, new Vector3(defaltPos + i * 2.0f, 2.0f, 7.0f), createPrefab.transform.rotation);
+            GameObject enemyObject = Instantiate(BlueEnemy, new Vector3(defaltPos + i * 2.0f, 2.0f, 7.0f), BlueEnemy.transform.rotation);
             enemyObject.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
 
         }
@@ -129,7 +131,7 @@ public class EnemyGenerator : MonoBehaviour
         //EnemyObjectを縦一列に並べて生成
         for(int i = 0; i < EnemyCount; i++)
         {
-            GameObject enemyObject = Instantiate(createPrefab, new Vector3(0, 2.0f, 7.0f + 2.0f*i), createPrefab.transform.rotation);
+            GameObject enemyObject = Instantiate(BlueEnemy, new Vector3(0, 2.0f, 7.0f + 2.0f*i), BlueEnemy.transform.rotation);
             enemyObject.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
         }
 
@@ -139,23 +141,34 @@ public class EnemyGenerator : MonoBehaviour
     {
         range_lower = RangeManager.GetComponent<RangeManager>().range_lower;
         range_upper = RangeManager.GetComponent<RangeManager>().range_upper;
-        Debug.Log(range_lower);
-        Debug.Log(range_upper);
         EnemyCount = 5;
 
         int i;
         for (i = 0; i < EnemyCount; i++)
         {
             // rangeAとrangeBのx座標の範囲内でランダムな数値を作成
-            float x = Random.Range(range_lower.x, range_upper.x);
+            float x = Random.Range(range_lower.x + 3, range_upper.x - 3);
             // rangeAとrangeBのy座標の範囲内でランダムな数値を作成
-            float y = Random.Range(range_lower.y, range_upper.y);
+            float y = Random.Range(range_lower.y + 2, range_upper.y);
             // rangeAとrangeBのz座標の範囲内でランダムな数値を作成
             float z = Random.Range(range_lower.z, range_upper.z);
 
             // GameObjectを上記で決まったランダムな場所に生成
-            GameObject enemyObject = Instantiate(createPrefab, new Vector3(x, y, z), createPrefab.transform.rotation);
+            GameObject enemyObject = Instantiate(MovingBlueEnemy, new Vector3(x, y, z), MovingBlueEnemy.transform.rotation);
             enemyObject.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
         }
+    }
+    void Level5Generate()
+    {
+        EnemyCount = 3;
+
+        GameObject enemyObjectBlue = Instantiate(BlueEnemy, new Vector3(-4.0f, 2.0f, 7.0f), BlueEnemy.transform.rotation);
+        enemyObjectBlue.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
+
+        GameObject enemyObjectYellow = Instantiate(YellowEnemy, new Vector3(0, 2.0f, 7.0f), YellowEnemy.transform.rotation);
+        enemyObjectYellow.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
+
+        GameObject enemyObjectRed = Instantiate(RedEnemy, new Vector3(4.0f, 2.0f, 7.0f), RedEnemy.transform.rotation);
+        enemyObjectRed.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
     }
 }
