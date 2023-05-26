@@ -15232,6 +15232,14 @@ PrefabInstance:
       propertyPath: _trackingOriginType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: EnableRotation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: EnableLinearMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 14300000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_Radius
       value: 0.5
@@ -15274,8 +15282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79a57c9bab9fa04981b5b432972c3ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6397299145475853824, guid: cb3587d9e8080704aae546393cdb9a0f, type: 3}
+  normalPunch: {fileID: 0}
+  bluePunch: {fileID: 0}
+  yellowPunch: {fileID: 0}
+  redPunch: {fileID: 0}
   rayScale: 2
+  ColorEnable: 0
   TrackingSpace: {fileID: 703680895}
 --- !u!1 &709092996
 GameObject:
@@ -37320,6 +37332,7 @@ MonoBehaviour:
   LoadTitleSceneCube: {fileID: 0}
   LoadRankingSceneCube: {fileID: 0}
   MessageCanvas: {fileID: 0}
+  FireWorks: {fileID: 0}
 --- !u!4 &1704201572
 Transform:
   m_ObjectHideFlags: 0

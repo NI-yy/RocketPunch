@@ -27,4 +27,5 @@ public class RandomWalking : MonoBehaviour
         float noise = Unity.Mathematics.noise.snoise(new float2(rand, Time.time));
         this.transform.position = initPos +  new Vector3(sin_x + noise, sin_y, 0);
     }
+
 }

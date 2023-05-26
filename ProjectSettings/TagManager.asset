@@ -4,21 +4,24 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PunchCube
   - EnemyCube
   - RangeArea
   - RedPunch
   - YellowPunch
+  - BluePunch
+  - NormalPunch
+  - PunchCube
+  - LaserCollider
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Punch
   - Water
   - UI
-  - EnemyCube
-  - Yellow
-  - Red
+  - Enemy
+  - 
+  - 
   - 
   - 
   - 

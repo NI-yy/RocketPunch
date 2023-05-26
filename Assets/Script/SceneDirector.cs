@@ -8,12 +8,13 @@ public class SceneDirector : MonoBehaviour
     //test
     private int index;
 
+
     public void LoadNextScene()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
         index++;
         SceneManager.LoadScene(index);
-        Debug.Log(index);
+        Debug.Log("Next" + index);
     }
 
     public void LoadTitleScene()

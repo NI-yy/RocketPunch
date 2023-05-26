@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a8b6f9b06ceaad84597974801cff9e9c, type: 2}
+  - {fileID: 2100000, guid: ebd389a7176a61f4c88965b506f5b5e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,7 +114,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &3611673274319260466
 MonoBehaviour:
@@ -131,9 +131,15 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 93eaace86b49b6f4c9f2f148135b8375, type: 3}
   generator: {fileID: 0}
   hitEffect: {fileID: 8699108103038855094}
-  isBlue: 1
+  enemyPrefab: {fileID: 8699108102830263225}
+  lifeCanvas: {fileID: 0}
+  lifeText: {fileID: 0}
+  isNormal: 1
+  isBlue: 0
   isYellow: 0
   isRed: 0
+  durable: 0
+  life: 0
 --- !u!1 &8699108102830263225
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8699108102830263226}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: eightSided_Enemy_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +184,8 @@ GameObject:
   - component: {fileID: 8699108103038855095}
   - component: {fileID: 8699108103038855097}
   - component: {fileID: 8699108103038855096}
-  m_Layer: 0
+  - component: {fileID: 6154598695510413216}
+  m_Layer: 6
   m_Name: hitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5037,3 +5044,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &6154598695510413216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8699108103038855094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cec17f5f3c3bde45bc98c4451f6c576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eightSidedBody_Enemy: {fileID: 7133974383064490284}

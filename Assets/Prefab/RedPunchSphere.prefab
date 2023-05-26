@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5475983112004494691}
   - component: {fileID: 1376777031828631385}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 159613025473873560}
   - component: {fileID: 3767289132787786205}
   - component: {fileID: 3334996535687650581}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: RedPunchSphere
   m_TagString: RedPunch
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4251684962796342760, guid: 69f55a852e7ef9c40882f95ad103ee4e, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4251684962796342760, guid: 69f55a852e7ef9c40882f95ad103ee4e, type: 3}
       propertyPath: m_IsActive

@@ -32,8 +32,13 @@ public class GameDirector : MonoBehaviour
             Debug.Log("buildIndex = 0");
             score = 0;
         }
-        timerText.SetText("0");
-        scoreText.SetText(score.ToString("F1"));
+
+        if(SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            timerText.SetText(time.ToString("F1"));
+            scoreText.SetText(score.ToString("F1"));
+        }
+        
     }
 
     // Update is called once per frame
@@ -55,10 +60,7 @@ public class GameDirector : MonoBehaviour
             
             if (this.time < 0)//タイムアップ
             {
-                this.timerText.SetText("0.0");
-                EnemyGenerator.GetComponent<EnemyGenerator>().TimeIsUp();
-                GameOver();
-                playingFlag = false;
+                GameOver();   
             }
         }
 
@@ -95,13 +97,17 @@ public class GameDirector : MonoBehaviour
         }
     }
 
-    void GameOver()
+    public void GameOver()
     {
         Debug.Log("GameOver!");
+        this.timerText.SetText("0.0");
+        EnemyGenerator.GetComponent<EnemyGenerator>().TimeIsUp();
+        
         LoadTitleSceneCube.SetActive(true);
         MessageCanvas.SetActive(true);
 
         messageText.text = "GameOver!\n" + "Your Score is " + score.ToString("F1");
+        playingFlag = false;
     }
 
     public float GetScore()

@@ -20,8 +20,8 @@ public class LoadTitleSceneCube : MonoBehaviour
     // ゲームオブジェクト同士が接触したタイミングで実行
     void OnTriggerEnter(Collider collider)
     {
-        // もし衝突した相手オブジェクトの名前が"Cube"ならば
-        if (collider.gameObject.CompareTag("PunchCube"))
+        // もし衝突した相手オブジェクトの名前が"Punch"ならば
+        if (collider.gameObject.layer == 3)
         {
             //効果音再生
             GameObject.FindObjectOfType<AudioSource>().PlayOneShot(clip);

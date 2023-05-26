@@ -19,10 +19,25 @@ EditorBuildSettings:
     guid: 7217c9b09e620f749a6f19a2db164b07
   - enabled: 1
     path: Assets/Scenes/Level4Scene.unity
-    guid: 305c9e11c5941654f840e5a083cc4ecd
+    guid: 978e6593bd240eb48bcc2e4364a85044
   - enabled: 1
     path: Assets/Scenes/Level5Scene.unity
-    guid: 978e6593bd240eb48bcc2e4364a85044
+    guid: 305c9e11c5941654f840e5a083cc4ecd
+  - enabled: 1
+    path: Assets/Scenes/Level6Scene.unity
+    guid: 6a9179039694274438c0061837761cec
+  - enabled: 1
+    path: Assets/Scenes/Level7Scene.unity
+    guid: 52527be67388bda429d98f6c85d76958
+  - enabled: 1
+    path: Assets/Scenes/Level8Scene.unity
+    guid: 636943a7f15dcde4e8dacac3c0a9a0d3
+  - enabled: 1
+    path: Assets/Scenes/Level9Scene.unity
+    guid: e841d13ebe7086f4abb96682fff1d3e5
+  - enabled: 1
+    path: Assets/Scenes/Level10Scene.unity
+    guid: 0652a60fb4aa4e046930c25b8fe54c00
   - enabled: 1
     path: Assets/naichilab/unity-simple-ranking/Scenes/Ranking.unity
     guid: 152244f5855414ac4a3874f14efa583c
