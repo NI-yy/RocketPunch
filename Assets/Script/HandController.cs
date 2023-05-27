@@ -165,12 +165,12 @@ public class HandController : MonoBehaviour
                     GameObject bulletObject;
                     Debug.Log("パンチ速度最大値は" + vRightMagnitudeList.Max());
 
-                    if (vRightMagnitudeList.Max() < 5)
+                    if (vRightMagnitudeList.Max() < 2.5f)
                     {
                         Debug.Log("青色");
                         bulletObject = Instantiate(bluePunch, worldPosRight, Quaternion.identity);
                     }
-                    else if (vRightMagnitudeList.Max() >= 5 && vRightMagnitudeList.Max() < 6)
+                    else if (vRightMagnitudeList.Max() >= 3.0f && vRightMagnitudeList.Max() < 3.5f)
                     {
                         Debug.Log("黄色");
                         bulletObject = Instantiate(yellowPunch, worldPosRight, Quaternion.identity);

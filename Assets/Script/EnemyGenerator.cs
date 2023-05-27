@@ -234,7 +234,7 @@ public class EnemyGenerator : MonoBehaviour
 
         for(i = 0; i < EnemyCount; i++)
         {
-            GameObject enemyObject = Instantiate(NormalEnemySpiral, new Vector3(0, 0, 0), NormalEnemySpiral.transform.rotation);
+            GameObject enemyObject = Instantiate(NormalEnemySpiral, new Vector3(0, 0, 22.0f), NormalEnemySpiral.transform.rotation);
             enemyObject.transform.GetChild(0).gameObject.GetComponent<EnemyController>().generator = this;
         }
         

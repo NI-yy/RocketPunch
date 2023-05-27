@@ -19,6 +19,7 @@ public class GameDirector : MonoBehaviour
     public GameObject EnemyGenerator;
 
     public GameObject LoadNextSceneCube;
+    public GameObject RetryCube;
     public GameObject LoadTitleSceneCube;
     public GameObject LoadRankingSceneCube;
     public GameObject MessageCanvas;
@@ -104,6 +105,7 @@ public class GameDirector : MonoBehaviour
         EnemyGenerator.GetComponent<EnemyGenerator>().TimeIsUp();
         
         LoadTitleSceneCube.SetActive(true);
+        RetryCube.SetActive(true);
         MessageCanvas.SetActive(true);
 
         messageText.text = "GameOver!\n" + "Your Score is " + score.ToString("F1");
@@ -114,5 +116,12 @@ public class GameDirector : MonoBehaviour
     {
         Debug.Log("return " + score);
         return score;
+    }
+
+    public void ResetScore()
+    {
+        Debug.Log("リセット前");
+        score = 0;
+        Debug.Log("リセット後");
     }
 }

@@ -2982,6 +2982,7 @@ MonoBehaviour:
   time: 20
   EnemyGenerator: {fileID: 835051776}
   LoadNextSceneCube: {fileID: 0}
+  RetryCube: {fileID: 0}
   LoadTitleSceneCube: {fileID: 0}
   LoadRankingSceneCube: {fileID: 0}
   MessageCanvas: {fileID: 0}
@@ -8248,15 +8249,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277326161}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 1, z: 4.2}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -5, y: 1, z: 0}
   m_LocalScale: {x: 2.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1812210697}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &277326167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21393,10 +21394,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NormalEnemy: {fileID: 8699108102830263225, guid: 3076d58c6cd89ef4fa9433f8d2a609ec, type: 3}
   MovingNormalEnemy: {fileID: 5280917058172313188, guid: 97297065df937e845a303773ad96726f, type: 3}
+  NormalEnemySpiral: {fileID: 0}
   NormalEnemyDurable: {fileID: 5088898731877540190, guid: f60967fe1e528ef4092094891fd52e88, type: 3}
   BlueEnemy: {fileID: 8699108102830263225, guid: e25b4f65492962f42a90a9990b3a92f6, type: 3}
+  MovingBlueEnemy: {fileID: 0}
   YellowEnemy: {fileID: 8699108102830263225, guid: b73ff6ab8761cf4429d3861fd4d5113b, type: 3}
+  MovingYellowEnemy: {fileID: 0}
   RedEnemy: {fileID: 8699108102830263225, guid: 239236e32d00ee44ab6573d8e8a8d88c, type: 3}
+  MovingRedEnemy: {fileID: 0}
   GameDirector: {fileID: 0}
   RangeManager: {fileID: 1816390756}
   EnemyCount: 0
@@ -22125,15 +22130,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876318966}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 1, z: 4.2}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 5, y: 1, z: 0}
   m_LocalScale: {x: 2.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 427034624}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &876318971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36720,6 +36725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0c41bb93022aa45a2f38c9c39ff78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameDirector: {fileID: 0}
 --- !u!4 &1553267337
 Transform:
   m_ObjectHideFlags: 0
