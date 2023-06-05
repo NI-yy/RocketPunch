@@ -30,7 +30,8 @@ namespace naichilab
 
         private string ObjectID
         {
-            get { return _objectid ?? (_objectid = PlayerPrefs.GetString(BoardIdPlayerPrefsKey, null)); }
+            //get { return _objectid ?? (_objectid = PlayerPrefs.GetString(BoardIdPlayerPrefsKey, null)); }
+            get { return _objectid = System.DateTime.Now.ToString(); }
             set
             {
                 if (_objectid == value)
@@ -68,6 +69,7 @@ namespace naichilab
 
         void Start()
         {
+            Debug.Log("現在時刻" + System.DateTime.Now.ToString());
             sendScoreButton.interactable = false; //送信ボタンを押せないようにしている
             _board = RankingLoader.Instance.CurrentRanking;
             _lastScore = RankingLoader.Instance.LastScore;

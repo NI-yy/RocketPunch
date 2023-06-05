@@ -457,6 +457,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral39CB21871F9F9FE5AE18BA5E81ED4EC6DADB8E03
 IL2CPP_EXTERN_C String_t* _stringLiteral4092F3E355F4C91924AA3F56E8F8CEF3C314E8EF;
 IL2CPP_EXTERN_C String_t* _stringLiteral40EAEF253C6F72CA82E51829B37A3DE4258DB6DB;
 IL2CPP_EXTERN_C String_t* _stringLiteral42C4A890823A65A3B10BC0643C52D0314274735D;
+IL2CPP_EXTERN_C String_t* _stringLiteral446C198D6999073DF7958BC7B659DFBAAA262658;
 IL2CPP_EXTERN_C String_t* _stringLiteral45EFBA9C9914C37DEC5C17F92C7BC4640DB8465B;
 IL2CPP_EXTERN_C String_t* _stringLiteral4AD8C30A17BE8E10B57C425CB1414F5C612BD5E1;
 IL2CPP_EXTERN_C String_t* _stringLiteral505163CB4C4B5B9751A1021D59283203C0C889BE;
@@ -2720,22 +2721,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RankingLoader_SendScoreAndShowRanking_m9
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_m2841705C02C450E42A44B5EEE2A6A2C4261FA3AF (String_t* ___sceneName0, int32_t ___mode1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
-// System.String naichilab.RankingSceneManager::get_BoardIdPlayerPrefsKey()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RankingSceneManager_get_BoardIdPlayerPrefsKey_m60E1385C020B31BA3529A685B1010DFC4CC4B424 (RankingSceneManager_t4261CCF168519F9C3929D4F2E8F761FBAD656C22* __this, const RuntimeMethod* method) ;
-// System.String UnityEngine.PlayerPrefs::GetString(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_mE80FED64ACC3134149C8202FDDDE774C29CB0AF2 (String_t* ___key0, String_t* ___defaultValue1, const RuntimeMethod* method) ;
+// System.DateTime System.DateTime::get_Now()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C (const RuntimeMethod* method) ;
+// System.String System.DateTime::ToString()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTime_ToString_m447C83E1F8FFFFF4D20C0F7D5C18DEB160F9833A (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, const RuntimeMethod* method) ;
 // System.Boolean System.String::op_Equality(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1 (String_t* ___a0, String_t* ___b1, const RuntimeMethod* method) ;
+// System.String naichilab.RankingSceneManager::get_BoardIdPlayerPrefsKey()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RankingSceneManager_get_BoardIdPlayerPrefsKey_m60E1385C020B31BA3529A685B1010DFC4CC4B424 (RankingSceneManager_t4261CCF168519F9C3929D4F2E8F761FBAD656C22* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.PlayerPrefs::SetString(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256 (String_t* ___key0, String_t* ___value1, const RuntimeMethod* method) ;
 // System.String UnityEngine.UI.InputField::get_text()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InputField_get_text_m6E0796350FF559505E4DF17311803962699D6704 (InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Debug::Log(System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___message0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UI.Selectable::set_interactable(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492 (Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712* __this, bool ___value0, const RuntimeMethod* method) ;
 // naichilab.RankingLoader naichilab.RankingLoader::get_Instance()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RankingLoader_tEB0B79FCA8481B4341C2DEE25D689A6C896E71D4* RankingLoader_get_Instance_mB9A1366E09530C241AF5D7424FDE3E672BD15BFD (const RuntimeMethod* method) ;
-// System.Void UnityEngine.Debug::Log(System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___message0, const RuntimeMethod* method) ;
+// System.String UnityEngine.PlayerPrefs::GetString(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_mE80FED64ACC3134149C8202FDDDE774C29CB0AF2 (String_t* ___key0, String_t* ___defaultValue1, const RuntimeMethod* method) ;
 // System.Collections.IEnumerator naichilab.RankingSceneManager::GetHighScoreAndRankingBoard()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RankingSceneManager_GetHighScoreAndRankingBoard_m02B635DB7FE85971DC4A827E96A27057D129A033 (RankingSceneManager_t4261CCF168519F9C3929D4F2E8F761FBAD656C22* __this, const RuntimeMethod* method) ;
 // UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
@@ -2879,8 +2884,6 @@ inline bool Enumerator_MoveNext_m2EB781C703B9DE63E0C885621FD7C92DDC2F1E30 (Enume
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DateTime__ctor_m64AFCE84ABB24698256EB9F635EFD0A221823441 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, int64_t ___ticks0, const RuntimeMethod* method) ;
 // System.DateTime System.DateTime::Add(System.TimeSpan)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D DateTime_Add_mC882C6BBE75862360A1A0C733B4FFE3210D4B9B1 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___value0, const RuntimeMethod* method) ;
-// System.String System.DateTime::ToString()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTime_ToString_m447C83E1F8FFFFF4D20C0F7D5C18DEB160F9833A (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, const RuntimeMethod* method) ;
 // System.Int64 System.TimeSpan::get_Ticks()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int64_t TimeSpan_get_Ticks_mC50131E57621F29FACC53B3241432ABB874FA1B5_inline (TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* __this, const RuntimeMethod* method) ;
 // System.String System.Int64::ToString()
@@ -6185,45 +6188,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RankingNode__ctor_m92645E74D02601BE3C041
 // System.String naichilab.RankingSceneManager::get_ObjectID()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RankingSceneManager_get_ObjectID_m5CC696ACB387F4CD28E0DC06D9E14497E2D95A22 (RankingSceneManager_t4261CCF168519F9C3929D4F2E8F761FBAD656C22* __this, const RuntimeMethod* method) 
 {
-	String_t* V_0 = NULL;
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	String_t* V_1 = NULL;
-	String_t* G_B2_0 = NULL;
-	String_t* G_B1_0 = NULL;
+	String_t* V_2 = NULL;
 	{
-		// get { return _objectid ?? (_objectid = PlayerPrefs.GetString(BoardIdPlayerPrefsKey, null)); }
-		String_t* L_0 = __this->____objectid_18;
-		String_t* L_1 = L_0;
-		G_B1_0 = L_1;
-		if (L_1)
-		{
-			G_B2_0 = L_1;
-			goto IL_0020;
-		}
-	}
-	{
-		String_t* L_2;
-		L_2 = RankingSceneManager_get_BoardIdPlayerPrefsKey_m60E1385C020B31BA3529A685B1010DFC4CC4B424(__this, NULL);
-		String_t* L_3;
-		L_3 = PlayerPrefs_GetString_mE80FED64ACC3134149C8202FDDDE774C29CB0AF2(L_2, (String_t*)NULL, NULL);
-		String_t* L_4 = L_3;
-		V_0 = L_4;
-		__this->____objectid_18 = L_4;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____objectid_18), (void*)L_4);
-		String_t* L_5 = V_0;
-		G_B2_0 = L_5;
+		// get { return _objectid = System.DateTime.Now.ToString(); }
+		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0;
+		L_0 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
+		V_0 = L_0;
+		String_t* L_1;
+		L_1 = DateTime_ToString_m447C83E1F8FFFFF4D20C0F7D5C18DEB160F9833A((&V_0), NULL);
+		String_t* L_2 = L_1;
+		V_1 = L_2;
+		__this->____objectid_18 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____objectid_18), (void*)L_2);
+		String_t* L_3 = V_1;
+		V_2 = L_3;
+		goto IL_001a;
 	}
 
-IL_0020:
+IL_001a:
 	{
-		V_1 = G_B2_0;
-		goto IL_0023;
-	}
-
-IL_0023:
-	{
-		// get { return _objectid ?? (_objectid = PlayerPrefs.GetString(BoardIdPlayerPrefsKey, null)); }
-		String_t* L_6 = V_1;
-		return L_6;
+		// get { return _objectid = System.DateTime.Now.ToString(); }
+		String_t* L_4 = V_2;
+		return L_4;
 	}
 }
 // System.Void naichilab.RankingSceneManager::set_ObjectID(System.String)
@@ -6355,45 +6351,59 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RankingSceneManager_Start_m32C12F042EA6B
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1FA13CA565DC9B5105D70A528D26A6FC7A57049E);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral446C198D6999073DF7958BC7B659DFBAAA262658);
 		s_Il2CppMethodInitialized = true;
 	}
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	{
-		// sendScoreButton.interactable = false; //?????????????????
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___sendScoreButton_11;
-		NullCheck(L_0);
-		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_0, (bool)0, NULL);
-		// _board = RankingLoader.Instance.CurrentRanking;
-		RankingLoader_tEB0B79FCA8481B4341C2DEE25D689A6C896E71D4* L_1;
-		L_1 = RankingLoader_get_Instance_mB9A1366E09530C241AF5D7424FDE3E672BD15BFD(NULL);
-		NullCheck(L_1);
-		RankingInfo_t3CB5807A63140046A5925132213BE2D2301F2335* L_2 = L_1->___CurrentRanking_5;
-		__this->____board_19 = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____board_19), (void*)L_2);
-		// _lastScore = RankingLoader.Instance.LastScore;
-		RankingLoader_tEB0B79FCA8481B4341C2DEE25D689A6C896E71D4* L_3;
-		L_3 = RankingLoader_get_Instance_mB9A1366E09530C241AF5D7424FDE3E672BD15BFD(NULL);
-		NullCheck(L_3);
-		RuntimeObject* L_4 = L_3->___LastScore_6;
-		__this->____lastScore_20 = L_4;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____lastScore_20), (void*)L_4);
-		// Debug.Log(BoardIdPlayerPrefsKey + "=" + PlayerPrefs.GetString(BoardIdPlayerPrefsKey, null));
-		String_t* L_5;
-		L_5 = RankingSceneManager_get_BoardIdPlayerPrefsKey_m60E1385C020B31BA3529A685B1010DFC4CC4B424(__this, NULL);
-		String_t* L_6;
-		L_6 = RankingSceneManager_get_BoardIdPlayerPrefsKey_m60E1385C020B31BA3529A685B1010DFC4CC4B424(__this, NULL);
-		String_t* L_7;
-		L_7 = PlayerPrefs_GetString_mE80FED64ACC3134149C8202FDDDE774C29CB0AF2(L_6, (String_t*)NULL, NULL);
-		String_t* L_8;
-		L_8 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_5, _stringLiteral1FA13CA565DC9B5105D70A528D26A6FC7A57049E, L_7, NULL);
+		// Debug.Log("????" + System.DateTime.Now.ToString());
+		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0;
+		L_0 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
+		V_0 = L_0;
+		String_t* L_1;
+		L_1 = DateTime_ToString_m447C83E1F8FFFFF4D20C0F7D5C18DEB160F9833A((&V_0), NULL);
+		String_t* L_2;
+		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral446C198D6999073DF7958BC7B659DFBAAA262658, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_8, NULL);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
+		// sendScoreButton.interactable = false; //?????????????????
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->___sendScoreButton_11;
+		NullCheck(L_3);
+		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_3, (bool)0, NULL);
+		// _board = RankingLoader.Instance.CurrentRanking;
+		RankingLoader_tEB0B79FCA8481B4341C2DEE25D689A6C896E71D4* L_4;
+		L_4 = RankingLoader_get_Instance_mB9A1366E09530C241AF5D7424FDE3E672BD15BFD(NULL);
+		NullCheck(L_4);
+		RankingInfo_t3CB5807A63140046A5925132213BE2D2301F2335* L_5 = L_4->___CurrentRanking_5;
+		__this->____board_19 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____board_19), (void*)L_5);
+		// _lastScore = RankingLoader.Instance.LastScore;
+		RankingLoader_tEB0B79FCA8481B4341C2DEE25D689A6C896E71D4* L_6;
+		L_6 = RankingLoader_get_Instance_mB9A1366E09530C241AF5D7424FDE3E672BD15BFD(NULL);
+		NullCheck(L_6);
+		RuntimeObject* L_7 = L_6->___LastScore_6;
+		__this->____lastScore_20 = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____lastScore_20), (void*)L_7);
+		// Debug.Log(BoardIdPlayerPrefsKey + "=" + PlayerPrefs.GetString(BoardIdPlayerPrefsKey, null));
+		String_t* L_8;
+		L_8 = RankingSceneManager_get_BoardIdPlayerPrefsKey_m60E1385C020B31BA3529A685B1010DFC4CC4B424(__this, NULL);
+		String_t* L_9;
+		L_9 = RankingSceneManager_get_BoardIdPlayerPrefsKey_m60E1385C020B31BA3529A685B1010DFC4CC4B424(__this, NULL);
+		String_t* L_10;
+		L_10 = PlayerPrefs_GetString_mE80FED64ACC3134149C8202FDDDE774C29CB0AF2(L_9, (String_t*)NULL, NULL);
+		String_t* L_11;
+		L_11 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_8, _stringLiteral1FA13CA565DC9B5105D70A528D26A6FC7A57049E, L_10, NULL);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_11, NULL);
 		// StartCoroutine(GetHighScoreAndRankingBoard());
-		RuntimeObject* L_9;
-		L_9 = RankingSceneManager_GetHighScoreAndRankingBoard_m02B635DB7FE85971DC4A827E96A27057D129A033(__this, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_10;
-		L_10 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_9, NULL);
+		RuntimeObject* L_12;
+		L_12 = RankingSceneManager_GetHighScoreAndRankingBoard_m02B635DB7FE85971DC4A827E96A27057D129A033(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_13;
+		L_13 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_12, NULL);
 		// }
 		return;
 	}

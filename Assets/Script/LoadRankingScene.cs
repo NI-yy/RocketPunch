@@ -9,11 +9,11 @@ public class LoadRankingScene : MonoBehaviour
 
     private void Update()
     {
-        if (OVRInput.GetDown(OVRInput.RawButton.B))
+        /*if (OVRInput.GetDown(OVRInput.RawButton.B))
         {
             //ランキングシーンに遷移
             SceneDirector.GetComponent<SceneDirector>().LoadRankingScene();
-        }
+        }*/
     }
 
     // ゲームオブジェクト同士が接触したタイミングで実行

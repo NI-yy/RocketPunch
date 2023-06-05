@@ -9,11 +9,11 @@ public class LoadNextSceneCube : MonoBehaviour
 
     private void Update()
     {
-        if (OVRInput.GetDown(OVRInput.RawButton.A))
+        /*if (OVRInput.GetDown(OVRInput.RawButton.A))
         {
             //次のシーンに遷移
             SceneDirector.GetComponent<SceneDirector>().LoadNextScene();
-        }
+        }*/
     }
 
     // ゲームオブジェクト同士が接触したタイミングで実行

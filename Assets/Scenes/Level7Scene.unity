@@ -49988,7 +49988,7 @@ MonoBehaviour:
   scoreText: {fileID: 933134599}
   messageText: {fileID: 638782951}
   is_final: 0
-  time: 30
+  time: 40
   EnemyGenerator: {fileID: 150252639}
   LoadNextSceneCube: {fileID: 1545482316}
   RetryCube: {fileID: 616224939}

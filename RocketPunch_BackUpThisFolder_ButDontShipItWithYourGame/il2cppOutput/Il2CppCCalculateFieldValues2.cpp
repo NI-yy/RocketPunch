@@ -34027,6 +34027,8 @@ struct LoadTitleSceneCube_t2F8A3004B69AD8186037C1508F5EBCC23DCD6275  : public Mo
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___clip_4;
 	// UnityEngine.GameObject LoadTitleSceneCube::SceneDirector
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___SceneDirector_5;
+	// System.Int32 LoadTitleSceneCube::index
+	int32_t ___index_6;
 };
 
 // LocalizedHaptics
@@ -40093,9 +40095,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6053[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6054[2] = 
 {
 	static_cast<int32_t>(offsetof(LoadRankingScene_t5BA0BE61E103DB1BD9502E5C8AD96B3FE1AAE7AD, ___clip_4)),static_cast<int32_t>(offsetof(LoadRankingScene_t5BA0BE61E103DB1BD9502E5C8AD96B3FE1AAE7AD, ___SceneDirector_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6055[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6055[3] = 
 {
-	static_cast<int32_t>(offsetof(LoadTitleSceneCube_t2F8A3004B69AD8186037C1508F5EBCC23DCD6275, ___clip_4)),static_cast<int32_t>(offsetof(LoadTitleSceneCube_t2F8A3004B69AD8186037C1508F5EBCC23DCD6275, ___SceneDirector_5)),};
+	static_cast<int32_t>(offsetof(LoadTitleSceneCube_t2F8A3004B69AD8186037C1508F5EBCC23DCD6275, ___clip_4)),static_cast<int32_t>(offsetof(LoadTitleSceneCube_t2F8A3004B69AD8186037C1508F5EBCC23DCD6275, ___SceneDirector_5)),static_cast<int32_t>(offsetof(LoadTitleSceneCube_t2F8A3004B69AD8186037C1508F5EBCC23DCD6275, ___index_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6056[4] = 
 {
 	static_cast<int32_t>(offsetof(MovingSpiral_t035BC229C0BC5EF41142A0A6544FC79578A58915, ___T_4)),static_cast<int32_t>(offsetof(MovingSpiral_t035BC229C0BC5EF41142A0A6544FC79578A58915, ___f_5)),static_cast<int32_t>(offsetof(MovingSpiral_t035BC229C0BC5EF41142A0A6544FC79578A58915, ___initPos_6)),static_cast<int32_t>(offsetof(MovingSpiral_t035BC229C0BC5EF41142A0A6544FC79578A58915, ___rand_7)),};

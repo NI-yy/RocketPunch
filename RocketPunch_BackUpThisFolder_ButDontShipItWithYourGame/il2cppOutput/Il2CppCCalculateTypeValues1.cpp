@@ -46187,6 +46187,8 @@ struct LoadTitleSceneCube_t2F8A3004B69AD8186037C1508F5EBCC23DCD6275  : public Mo
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___clip_4;
 	// UnityEngine.GameObject LoadTitleSceneCube::SceneDirector
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___SceneDirector_5;
+	// System.Int32 LoadTitleSceneCube::index
+	int32_t ___index_6;
 };
 
 // LocalizedHaptics
